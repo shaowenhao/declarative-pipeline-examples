@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+import hudson.model.*
 pipeline {
     agent any
     stages {
@@ -19,3 +20,4 @@ pipeline {
         }
     }
 }
+
