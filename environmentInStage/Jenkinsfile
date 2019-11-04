@@ -4,7 +4,7 @@ pipeline{
     
     environment{
         FOO = "PIPELINE"
-        BUILD_NUM_ENV = currentBuild.getName()
+        BUILD_NUM_ENV = currentBuild.getNumber()
         
     }
     stages{
