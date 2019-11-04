@@ -4,6 +4,8 @@ pipeline{
     
     environment{
         FOO = "PIPELINE"
+        BUILD_NUM_ENV = currentBuild.getName()
+        
     }
     stages{
         stage("local"){
@@ -22,6 +24,8 @@ pipeline{
           steps{
               
               sh 'echo "FOO is $FOO BAR is $BAR"'
+               
+              sh 'echo "BUILD_NUM_ENV is $BUILD_NUM_ENV"'
           }
 
       }
