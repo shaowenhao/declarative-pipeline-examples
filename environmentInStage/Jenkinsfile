@@ -1,0 +1,32 @@
+pipeline{
+    
+    agent any
+    
+    environment{
+        FOO = "PIPELINE"
+    }
+    stages{
+        stage("local"){
+            environment {
+                
+                BAR = "STAGE"
+            }
+          steps{
+              
+              sh 'echo "FOO is $FOO BAR is $BAR"'
+          }
+
+        }
+      stage("global"){
+          
+          steps{
+              
+              sh 'echo "FOO is $FOO BAR is $BAR"'
+          }
+
+      }
+
+    }
+
+
+}
